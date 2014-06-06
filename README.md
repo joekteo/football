@@ -1,4 +1,4 @@
 football
 ========
 
-wdi project
+wdi personal project mockup
