@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="em">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Joe K Teo, Paul LD" content="wdi personal project mockup">
+    <title>Predikt Mockup</title>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Before login template -->
+    <script id="before-login-template" type="text/x-handlebars-template">
+      <ul id="login-nav" class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle signup-login" data-toggle="dropdown">Sign up | Log in <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-login">
+            <li class="dropdown-header">Sign in:</li>
+            <li><input type="text" placeholder="Username or Email" class="form-control"></li>
+            <li><input type="text" placeholder="Password" class="form-control"></li>
+            <li>
+              <button type="submit" class="btn btn-success">Log in</button>
+              <button type="submit" class="btn btn-success">Sign up</button>
+            </li>
+            <li><a href="#">Forgot password?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </script>
+
+
+    <!-- After login template -->
+    <script id="after-login-template" type="text/x-handlebars-template">
+      <ul class="nav navbar-nav">
+        <li><a id="new-event-link" href="#new-event"><span class="glyphicon glyphicon-plus glyphicon-new-event"></span> New event</a></li>
+      </ul>
+      <ul id="login-nav" class="nav navbar-nav navbar-right">
+        <li><a id="profile-link" href="#">My Profile</a></li>
+        <li><a id="before-login-link" href="#log-out"><span class="glyphicon glyphicon-log-out"></span></a></li>
+      </ul>
+    </script>
+
+  </head>
+
+    <!-- navbar template -->
+    <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Predikt</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul id="header-navlinks" class="nav navbar-nav">
+            <li class="active"><a id="upcoming-link" href="#upcoming">Upcoming</a></li>
+            <li><a id="results-link" href="#results">Results</a></li>
+          </ul>
+          <div id="login-nav">
+            <!-- Login / Logout bar -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <main id="main" class="main container">
+      <!-- Page content -->
+    </main>
+
+    <div id="footer">
+      <div class="container">
+        <ol id="footer-navlinks" class="breadcrumb">
+        <li><a id="about-link" href="#about">About</a></li>
+        <li><a id="help-link" href="#help">Help</a></li>
+        <li><a id="jobs-link" href="#jobs">Jobs</a></li>
+        <li><a id="contact-link" href="#contact">Contact Us</a></li>
+        <li><a id="terms-link" href="#terms">Terms of Service</a></li>
+        <li><a id="privacy-link" href="#privacy">Privacy Policy</a></li>
+        <li class="active">&copy; Predikt. All rights reserved.</li>
+      </ol>
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Handlebars -->
+    <script src="js/handlebars-v1.3.0.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
