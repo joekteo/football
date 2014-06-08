@@ -17,30 +17,68 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script id="upcoming-template" type="text/x-handlebars-template">
+    <script id="dashboard-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="col-md-9">
-          <h1>Upcoming games:</h1>
-          {{#each upcomingGames}}
+          <h1>{{pageTitle}}</h1>
+          {{#each games}}
             <div class="game-show">
-              <p>{{homeTeam}}</p>
+              <div class="game-title">
+                <div class="game-box-left">
+                  <div class="game-home-flag"><img src={{homeFlag}} width="22px" height="22px" alt={{homeTeam}}></div>
+                  <div class="game-teams">{{homeTeam}} <span class="score">{{homeScore}}</span>-<span class="score">{{awayScore}}</span> {{awayTeam}}</div>
+                  <div class="game-away-flag"><img src={{awayFlag}} width="22px" height="22px" alt={{awayTeam}}></div>
+                </div>
+                <div class="game-box-right">
+                  <div class="game-date">{{date}}</div>
+                </div>
+              </div>
+              <div class="game-buttons">
+                <div class="game-box-left">
+                  <button type="button" class="btn btn-primary">Home</button>
+                  <button type="button" class="btn btn-success">Draw</button>
+                  <button type="button" class="btn btn-warning">Away</button>
+                </div>
+                <div class="margin-left-27">
+                  <img src={{hadPieChart}} width="30px" height="30px" alt="HAD">
+                </div>
+              </div>
+              <div class="game-buttons">
+                <div class="game-box-left">
+                  <button type="button" class="btn btn-primary">Over</button>
+                  <span class="badge margin-left-27">{{overUnder}}</span>
+                  <button type="button" class="btn btn-warning button-right">Under</button>
+                </div>
+                <div class="margin-left-27">
+                  <img src={{overUnderPieChart}} width="30px" height="30px" alt="HAD">
+                </div>
+              </div>
+              <div class="game-buttons">
+                <div class="game-buttons-had">
+                  <button type="button" class="btn btn-primary">{{homeHandicap}}</button>
+                  <span class="badge margin-left-10">Handicap</span>
+                  <button type="button" class="btn btn-warning button-right">{{awayHandicap}}</button>
+                </div>
+                <div class="margin-left-27">
+                  <img src={{handicapPieChart}} width="30px" height="30px" alt="HAD">
+                </div>
+              </div>
             </div>
           {{/each}}
         </div>
 
-        <div class="col-sm-3 col-md-3 leaderboard-list">
-          <ul class="list-unstyled">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-          </ul>
+        <div class="col-sm-3 col-md-3">
+          <h1>Leaderboard:</h1>
+          <div class="leaderboard-list">
+            <ul class="list-unstyled">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </script>
-
-    <script id="results-template" type="text/x-handlebars-template">
-      <h1>This is the RESULTS (past games) page</h1>
     </script>
 
     <script id="leaderboard-template" type="text/x-handlebars-template">
@@ -290,7 +328,6 @@
 
   </head>
 
-    <!-- navbar template -->
     <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -305,9 +342,15 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul id="header-navlinks" class="nav navbar-nav">
-            <li class="active"><a id="upcoming-link" href="#upcoming">Upcoming</a></li>
-            <li><a id="results-link" href="#results">Results</a></li>
-            <li><a id="leaderboard-link" href="#leaderboard">Leaderboard</a></li>
+            <li class="active">
+              <a id="upcoming-link" href="#upcoming">Upcoming</a>
+            </li>
+            <li>
+              <a id="results-link" href="#results">Results</a>
+            </li>
+            <li>
+              <a id="leaderboard-link" href="#leaderboard">Leaderboard</a>
+            </li>
           </ul>
           <div id="login-nav">
             <!-- Login / Logout bar -->
