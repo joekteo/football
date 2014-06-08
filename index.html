@@ -18,11 +18,33 @@
     <![endif]-->
 
     <script id="upcoming-template" type="text/x-handlebars-template">
-      <h1>This is the UPCOMING (future games) page</h1>
+      <div class="row">
+        <div class="col-md-9">
+          <h1>Upcoming games:</h1>
+          {{#each upcomingGames}}
+            <div class="game-show">
+              <p>{{homeTeam}}</p>
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="col-sm-3 col-md-3 leaderboard-list">
+          <ul class="list-unstyled">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+      </div>
     </script>
 
     <script id="results-template" type="text/x-handlebars-template">
       <h1>This is the RESULTS (past games) page</h1>
+    </script>
+
+    <script id="leaderboard-template" type="text/x-handlebars-template">
+      <h1>This is the LEADERBOARD page</h1>
     </script>
 
     <script id="new-event-template" type="text/x-handlebars-template">
@@ -201,7 +223,7 @@
       <h1>This is MY PROFILE page</h1>
       <div class="row">
         <div class="col-md-3">
-          <img src="/assets/images/profile-picture.png" width="200px" height="200px">
+          <img src="/assets/images/profiles/0001.jpg" width="200px" height="200px" class="img-thumbnail">
         </div>
         <div class="col-md-9">
           <dl class="dl-horizontal dl-profile">
@@ -285,6 +307,7 @@
           <ul id="header-navlinks" class="nav navbar-nav">
             <li class="active"><a id="upcoming-link" href="#upcoming">Upcoming</a></li>
             <li><a id="results-link" href="#results">Results</a></li>
+            <li><a id="leaderboard-link" href="#leaderboard">Leaderboard</a></li>
           </ul>
           <div id="login-nav">
             <!-- Login / Logout bar -->
@@ -307,7 +330,7 @@
         <li><a id="contact-link" href="#contact">Contact Us</a></li>
         <li><a id="terms-link" href="#terms">Terms of Service</a></li>
         <li><a id="privacy-link" href="#privacy">Privacy Policy</a></li>
-        <li class="active">&copy;&copy; Predikt. All rights reserved.</li>
+        <li class="active">&nbsp;&copy; Predikt. All rights reserved.</li>
       </ol>
       </div>
     </div>
