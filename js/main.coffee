@@ -3,18 +3,52 @@ $ ->
 # --------------------------------------
 # LINKS & TEMPLATES
 
-  events = [
-    { exhibition: "WW2", artist: "Joseph Stalin", venue: "HK Gallery", date: "5-30-14", description: "gallery about ww2" }
-    { exhibition: "Fruits: Painting", artist: "Billy Bob", venue: "Central Library", date: "5-31-14", description: "gallery about fruits by Billy Bob" }
-    { exhibition: "Jeff's Photography", artist: "Jeff Steam", venue: "Mon Kok Market", date: "5-31-14", description: "new works by Jeff Steam" }
+  upcomingGames = [
+    {
+      homeTeam: "Brazil"
+      awayTeam: "Argentina"
+      date: "06-11-14 20:00"
+      overUnder: 2.5
+      handicap: -1.5
+    }
+    {
+      homeTeam: "Switzerland"
+      awayTeam: "France"
+      date: "06-12-14 20:00"
+      overUnder: 2.5
+      handicap: +1.5
+    }
+    {
+      homeTeam: "Germany"
+      awayTeam: "Spain"
+      date: "06-13-14 20:00"
+      overUnder: 2.5
+      handicap: -1.5
+    }
+    {
+      homeTeam: "United States"
+      awayTeam: "Hong Kong"
+      date: "06-30-15 20:00"
+      overUnder: 4.5
+      handicap: +2.5
+    }
+  ]
+  pastGames = [
+    {
+      homeTeam: "South Korea"
+      awayTeam: "Australia"
+      homeScore: 1
+      awayScore: 2
+      date: "06-07-14 20:00"
+      overUnder: 2.5
+      handicap: -1.5
+
+    }
   ]
 
   unsetActive = () ->
     $('#header-navlinks').children().removeClass('active')
     $('#login-nav').children().children().removeClass('active')
-
-  # unsetActive = (lnk) ->
-    # lnk.closest('ul').children().removeClass('active')
 
   setActive = (lnk) ->
     lnk = $(lnk)
@@ -22,19 +56,17 @@ $ ->
     # unsetActive(lnk)
     lnk.parent().addClass('active')
 
-  eventsTemplate = Handlebars.compile $("#events-template").html()
-  newsTemplate = Handlebars.compile $("#news-template").html()
-  reviewsTemplate = Handlebars.compile $("#reviews-template").html()
+  upcomingTemplate = Handlebars.compile $("#upcoming-template").html()
+  resultsTemplate = Handlebars.compile $("#results-template").html()
 
   helpTemplate = Handlebars.compile $("#help-template").html()
   aboutTemplate = Handlebars.compile $("#about-template").html()
-  jobsTemplate = Handlebars.compile $("#jobs-template").html()
   contactTemplate = Handlebars.compile $("#contact-template").html()
   termsTemplate = Handlebars.compile $("#terms-template").html()
   privacyTemplate = Handlebars.compile $("#privacy-template").html()
   main = $('#main')
-  main.html eventsTemplate(
-      events: events
+  main.html upcomingTemplate(
+      games: upcomingGames
       )
 
   beforeLoginTemplate = Handlebars.compile $("#before-login-template").html()
@@ -44,23 +76,21 @@ $ ->
   loginNav = $('#login-nav')
   loginNav.html beforeLoginTemplate
 # ************************************************
-  main.html newEventTemplate
+  # main.html newEventTemplate
 # ************************************************
-  $('#header-navlinks').on 'click', '#events-link', (e) ->
+  $('#header-navlinks').on 'click', '#upcoming-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html eventsTemplate()
+    main.html upcomingTemplate(
+      games: upcomingGames
+      )
 
-  $('#header-navlinks').on 'click', '#news-link', (e) ->
+  $('#header-navlinks').on 'click', '#results-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html newsTemplate()
-
-  $('#header-navlinks').on 'click', '#reviews-link', (e) ->
-    e.preventDefault()
-    setActive(@)
-    main.html reviewsTemplate()
-
+    main.html resultsTemplate(
+      games: pastGames
+      )
 
   $('#footer-navlinks').on 'click', '#help-link', (e) ->
     e.preventDefault()
@@ -70,11 +100,6 @@ $ ->
   $('#footer-navlinks').on 'click', '#about-link', (e) ->
     e.preventDefault()
     main.html aboutTemplate()
-    unsetActive()
-
-  $('#footer-navlinks').on 'click', '#jobs-link', (e) ->
-    e.preventDefault()
-    main.html jobsTemplate()
     unsetActive()
 
   $('#footer-navlinks').on 'click', '#contact-link', (e) ->
