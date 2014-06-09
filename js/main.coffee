@@ -3,18 +3,176 @@ $ ->
 # --------------------------------------
 # LINKS & TEMPLATES
 
-  events = [
-    { exhibition: "WW2", artist: "Joseph Stalin", venue: "HK Gallery", date: "5-30-14", description: "gallery about ww2" }
-    { exhibition: "Fruits: Painting", artist: "Billy Bob", venue: "Central Library", date: "5-31-14", description: "gallery about fruits by Billy Bob" }
-    { exhibition: "Jeff's Photography", artist: "Jeff Steam", venue: "Mon Kok Market", date: "5-31-14", description: "new works by Jeff Steam" }
+  upcomingGames = [
+    {
+      homeTeam: "Brazil"
+      awayTeam: "Argentina"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/BRA.png"
+      awayFlag: "/assets/images/teams/ARG.png"
+      date: "11 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "-1.5"
+      awayHandicap: "+1.5"
+      hadPieChart: "/assets/images/piecharts/three1.png"
+      overUnderPieChart: "/assets/images/piecharts/two1.png"
+      handicapPieChart: "/assets/images/piecharts/two2.png"
+    }
+    {
+      homeTeam: "Switzerland"
+      awayTeam: "France"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/SWZ.png"
+      awayFlag: "/assets/images/teams/FRA.png"
+      date: "12 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "+1.5"
+      awayHandicap: "-1.5"
+      hadPieChart: "/assets/images/piecharts/three2.png"
+      overUnderPieChart: "/assets/images/piecharts/two3.png"
+      handicapPieChart: "/assets/images/piecharts/two4.png"
+    }
+    {
+      homeTeam: "Germany"
+      awayTeam: "Spain"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/GER.png"
+      awayFlag: "/assets/images/teams/SPA.png"
+      date: "13 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "-1.5"
+      awayHandicap: "+1.5"
+      hadPieChart: "/assets/images/piecharts/three3.png"
+      overUnderPieChart: "/assets/images/piecharts/two5.png"
+      handicapPieChart: "/assets/images/piecharts/two2.png"
+    }
+    {
+      homeTeam: "United States"
+      awayTeam: "Ghana"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/USA.png"
+      awayFlag: "/assets/images/teams/GHA.png"
+      date: "28 June 20:00"
+      overUnder: "4.5"
+      homeHandicap: "-2.5"
+      awayHandicap: "+2.5"
+      hadPieChart: "/assets/images/piecharts/three4.png"
+      overUnderPieChart: "/assets/images/piecharts/two1.png"
+      handicapPieChart: "/assets/images/piecharts/two4.png"
+    }
+    {
+      homeTeam: "Belgium"
+      awayTeam: "Chile"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/BEL.png"
+      awayFlag: "/assets/images/teams/CHI.png"
+      date: "29 June 20:00"
+      overUnder: "4.5"
+      homeHandicap: "-2.5"
+      awayHandicap: "+2.5"
+      hadPieChart: "/assets/images/piecharts/three4.png"
+      overUnderPieChart: "/assets/images/piecharts/two1.png"
+      handicapPieChart: "/assets/images/piecharts/two4.png"
+    }
+    {
+      homeTeam: "Italy"
+      awayTeam: "Japan"
+      homeScore: ""
+      awayScore: ""
+      homeFlag: "/assets/images/teams/ITA.png"
+      awayFlag: "/assets/images/teams/JPN.png"
+      date: "30 June 20:00"
+      overUnder: "4.5"
+      homeHandicap: "-2.5"
+      awayHandicap: "+2.5"
+      hadPieChart: "/assets/images/piecharts/three4.png"
+      overUnderPieChart: "/assets/images/piecharts/two1.png"
+      handicapPieChart: "/assets/images/piecharts/two4.png"
+    }
+  ]
+
+  pastGames = [
+    {
+      homeTeam: "South Korea"
+      awayTeam: "Australia"
+      homeScore: "1"
+      awayScore: "2"
+      homeFlag: "/assets/images/teams/KOR.png"
+      awayFlag: "/assets/images/teams/AUS.png"
+      date: "6 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "-1.5"
+      awayHandicap: "+1.5"
+      hadPieChart: "/assets/images/piecharts/three1.png"
+      overUnderPieChart: "/assets/images/piecharts/two5.png"
+      handicapPieChart: "/assets/images/piecharts/two2.png"
+    }
+    {
+      homeTeam: "Uruguay"
+      awayTeam: "Russia"
+      homeScore: "3"
+      awayScore: "1"
+      homeFlag: "/assets/images/teams/URU.png"
+      awayFlag: "/assets/images/teams/RUS.png"
+      date: "6 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "-1.5"
+      awayHandicap: "+1.5"
+      hadPieChart: "/assets/images/piecharts/three1.png"
+      overUnderPieChart: "/assets/images/piecharts/two5.png"
+      handicapPieChart: "/assets/images/piecharts/two2.png"
+    }
+    {
+      homeTeam: "Portugal"
+      awayTeam: "Nigeria"
+      homeScore: "1"
+      awayScore: "2"
+      homeFlag: "/assets/images/teams/POR.png"
+      awayFlag: "/assets/images/teams/NGA.png"
+      date: "6 June 20:00"
+      overUnder: "2.5"
+      homeHandicap: "-1.5"
+      awayHandicap: "+1.5"
+      hadPieChart: "/assets/images/piecharts/three1.png"
+      overUnderPieChart: "/assets/images/piecharts/two5.png"
+      handicapPieChart: "/assets/images/piecharts/two2.png"
+    }
+  ]
+
+  playersByPercent = [
+    { name: "Bob", percent: "78%", units: "1549" }
+    { name: "Joe", percent: "77%", units: "1651" }
+    { name: "Bill", percent: "75%", units: "1409" }
+    { name: "Ron", percent: "74%", units: "1210" }
+    { name: "Jim", percent: "61%", units: "1319" }
+    { name: "Ray", percent: "59%", units: "1200" }
+    { name: "Lina", percent: "59%", units: "1199" }
+    { name: "Rick", percent: "58%", units: "1105" }
+    { name: "Tina", percent: "57%", units: "1201" }
+    { name: "Ank", percent: "55%", units: "905" }
+  ]
+
+  playersByUnit = [
+    { name: "Joe", percent: "77%", units: "1651" }
+    { name: "Bob", percent: "78%", units: "1549" }
+    { name: "Bill", percent: "75%", units: "1409" }
+    { name: "Jim", percent: "61%", units: "1319" }
+    { name: "Ron", percent: "74%", units: "1210" }
+    { name: "Ray", percent: "59%", units: "1200" }
+    { name: "Lina", percent: "59%", units: "1199" }
+    { name: "Tina", percent: "57%", units: "1201" }
+    { name: "Rick", percent: "58%", units: "1105" }
+    { name: "Ank", percent: "55%", units: "905" }
   ]
 
   unsetActive = () ->
     $('#header-navlinks').children().removeClass('active')
     $('#login-nav').children().children().removeClass('active')
-
-  # unsetActive = (lnk) ->
-    # lnk.closest('ul').children().removeClass('active')
 
   setActive = (lnk) ->
     lnk = $(lnk)
@@ -22,45 +180,55 @@ $ ->
     # unsetActive(lnk)
     lnk.parent().addClass('active')
 
-  eventsTemplate = Handlebars.compile $("#events-template").html()
-  newsTemplate = Handlebars.compile $("#news-template").html()
-  reviewsTemplate = Handlebars.compile $("#reviews-template").html()
-
+  dashboardTemplate = Handlebars.compile $("#dashboard-template").html()
+  leaderboardTemplate = Handlebars.compile $("#leaderboard-template").html()
   helpTemplate = Handlebars.compile $("#help-template").html()
   aboutTemplate = Handlebars.compile $("#about-template").html()
-  jobsTemplate = Handlebars.compile $("#jobs-template").html()
   contactTemplate = Handlebars.compile $("#contact-template").html()
   termsTemplate = Handlebars.compile $("#terms-template").html()
   privacyTemplate = Handlebars.compile $("#privacy-template").html()
-  main = $('#main')
-  main.html eventsTemplate(
-      events: events
-      )
-
   beforeLoginTemplate = Handlebars.compile $("#before-login-template").html()
   afterLoginTemplate = Handlebars.compile $("#after-login-template").html()
   profileTemplate = Handlebars.compile $("#profile-template").html()
   newEventTemplate = Handlebars.compile $("#new-event-template").html()
+
   loginNav = $('#login-nav')
   loginNav.html beforeLoginTemplate
+  main = $('#main')
+  main.html dashboardTemplate(
+    pageTitle: "Upcoming games:"
+    games: upcomingGames
+    playersByPercent: playersByPercent
+    playersByUnit: playersByUnit
+    )
+
 # ************************************************
-  main.html newEventTemplate
+  # main.html newEventTemplate
 # ************************************************
-  $('#header-navlinks').on 'click', '#events-link', (e) ->
+  $('#header-navlinks').on 'click', '#upcoming-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html eventsTemplate()
+    main.html dashboardTemplate(
+      pageTitle: "Upcoming games:"
+      games: upcomingGames
+      playersByPercent: playersByPercent
+      playersByUnit: playersByUnit
+      )
 
-  $('#header-navlinks').on 'click', '#news-link', (e) ->
+  $('#header-navlinks').on 'click', '#results-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html newsTemplate()
+    main.html dashboardTemplate(
+      pageTitle: "Past games:"
+      games: pastGames
+      playersByPercent: playersByPercent
+      playersByUnit: playersByUnit
+      )
 
-  $('#header-navlinks').on 'click', '#reviews-link', (e) ->
+  $('#header-navlinks').on 'click', '#leaderboard-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html reviewsTemplate()
-
+    main.html leaderboardTemplate()
 
   $('#footer-navlinks').on 'click', '#help-link', (e) ->
     e.preventDefault()
@@ -70,11 +238,6 @@ $ ->
   $('#footer-navlinks').on 'click', '#about-link', (e) ->
     e.preventDefault()
     main.html aboutTemplate()
-    unsetActive()
-
-  $('#footer-navlinks').on 'click', '#jobs-link', (e) ->
-    e.preventDefault()
-    main.html jobsTemplate()
     unsetActive()
 
   $('#footer-navlinks').on 'click', '#contact-link', (e) ->
@@ -100,7 +263,7 @@ $ ->
   $('#login-nav').on 'click', '#before-login-link', (e) ->
     e.preventDefault()
     loginNav.html beforeLoginTemplate()
-    main.html eventsTemplate()
+    main.html upcomingTemplate()
 
   $('#login-nav').on 'click', '#profile-link', (e) ->
     e.preventDefault()

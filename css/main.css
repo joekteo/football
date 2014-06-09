@@ -70,3 +70,75 @@ code {
 .glyphicon-new-event {
   font-size: 11px;
 }
+
+.leaderboard-list {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.game-show {
+  padding: 14px;
+  margin: 0 0 14px 20px;
+  background-color: hsla(240,14.3%,99.5%,1);
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.game-buttons {
+  margin: 0 auto;
+  font-size: 12px;
+}
+.game-buttons > div {
+  display: inline-block;
+  width: 260px;
+}
+.game-buttons > div > button {
+  font-size: 12px;
+  height: 25px;
+  width: 80px;
+  padding: 0;
+  margin: 5px 2px;
+}
+.game-buttons > div > .badge {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #999;
+}
+.game-buttons > button > .badge {
+  font-size: 12px;
+  font-weight: normal;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-27 {
+  margin-left: 27px;
+}
+.game-box-left {
+  display: inline-block;
+  width: 270px;
+}
+.game-box-left > div {
+  display: inline-block;
+}
+.game-teams {
+  font-size: 14px;
+  font-weight: bold;
+  width: 204px;
+  text-align: center;
+}
+.game-box-right {
+  display: inline-block;
+  font-size: 10px;
+}
+.button-right {
+  float: right;
+}
+.score {
+  font-size: 15px;
+  color: Red;
+}
