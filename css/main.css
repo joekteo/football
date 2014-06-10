@@ -142,3 +142,14 @@ code {
   font-size: 15px;
   color: Red;
 }
+
+/*
+--------------------------------------------------
+ JOE'S CSS CHANGES
+--------------------------------------------------
+*/
+
+.panel-body table {
+  table-layout: fixed;
+  width:600px;
+}

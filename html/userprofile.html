@@ -1,40 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Profile Page</title>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-</head>
+<div class="row">
+  <div class="col-md-9">
+    <h2>BettingKing04s Profile</h2>
 
-<body>
-  <div class="banner">
-    <h2>BettingKing04's Profile</h2>
-  </div>
-
-  <div class="profile-container">
-
-    <div class="profile-image left">
-      <img data-src="holder.js/100%x180" alt="userphoto">
+    <div class="col-md-3">
+      <img src="/assets/images/profiles/5.jpeg" width="180px" height="180px" class="img-thumbnail" />
     </div>
 
-    <div class="user-name-record">
-      <div class="user-name">
-        <div class="row1 top-middle">
-          <h2>User Name</h2>
-            <p>BettingKing04</p>
-        </div>
-      </div>
-
-      <div class="record">
-        <div class="row2 bottom-middle">
-          <h2>Record</h2>
-            <p>2513-1530-55</p>
-        </div>
-      </div>
+    <div class="col-md-2">
+      <h2>User Name</h2>
+        <p>BettingKing04</p>
+      <h2>Record</h2>
+        <p>2513-1530-55</p>
     </div>
 
-    <div class="description right">
+    <div class="col-md-4">
       <h2>Location</h2>
         <p>California, USA</p>
       <h2>Website</h2>
@@ -43,62 +22,75 @@
         <p>Best Handicap Bettor Ever!!</p>
     </div>
 
-    <div class="social bottom">
-      <p>168 Followers</p>
-      <p>49 Following</p>
+    <div class="col-md-7">
+      <p>168 Followers | 49 Following</p>
     </div>
 
-  </div>
+  <div class="clearfix"></div>
 
-  <div class="banner">
-    <h2>BettingKing04's Overview</h2>
-  </div>
-
-  <div class="overview-container">
-    <div class="col1">
-      <div class="row1">
-        <h2>Units<h2>
-      </div>
-      <div class="row2 bottom-left">
-        <p>+42.22</p>
-      </div>
-
-    <div class="col2">
-      <div class="row1">
-        <h2>Win Percentage<h2>
-      </div>
-      <div class="row2 bottom-middle">
-        <p>67.46%</p>
+    <div class="col-md-9">
+      <div class="panel panel-default" style="width:685px">
+        <div class="panel-heading">Profile Overview</div>
+          <div class="panel-body">
+            <table>
+              <tr>
+                <th>Units</th>
+                <th>Win Percentage</th>
+                <th>Current Streak</th>
+              </tr>
+              <tr>
+                <td>+42.22</td>
+                <td>67.46%</td>
+                <td>6 Wins</td>
+              </tr>
+            </table>
+          </div>
       </div>
 
-    <div class="col3">
-      <div class="row1">
-        <h2>Current Streak<h2>
+      <div class="panel panel-default" style="width:685px">
+        <div class="panel-heading">Pending Wager</div>
+          <div class="panel-body">
+            <table>
+              <tr>
+                <th>06/09 World Cup</th>
+                <th>USA</th>
+                <th>Moneyline</th>
+                <th>-110.00</th>
+                <th>60 Coins</th>
+              </tr>
+            </table>
+          </div>
       </div>
-      <div class="row2 bottom-right">
-        <p>6 Wins</p>
-      </div>
+    </div>
   </div>
 
-  <div class="banner">
-    <h2>Pending Wagers</h2>
-  </div>
-  <div class="pending-wagers-list">
+    <div class="row col-md-3">
+      <ul class="nav nav-sidebar">
+        <div class="badge">
+          <img src="https://cdn3.iconfinder.com/data/icons/business-office-2/512/badge_award-512.png" alt="badge" width="70" height="70" />
+        </div>
+
+        <h1>Leaderboard:</h1>
+        <div class="leaderboard-list">
+          <ul class="list-unstyled">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+      </ul>
+    </div>
   </div>
 
-  <div class="banner">
-    <h2>Wager History</h2>
-  </div>
-  <div class="wager-history-list">
-  </div>
 
-  <div class="banner">
-    <h2>Wager History</h2>
-  </div>
+/*
+--------------------------------------------------
+ JOE'S CSS CHANGES
+--------------------------------------------------
+*/
 
-  <div class="badge">
-    <img data-src="holder.js/100%x180" alt="userphoto">
-  </div>
-
-</body>
-</html>
+table  {
+  table-layout: fixed;
+  width:600px;
+}
