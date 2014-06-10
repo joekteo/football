@@ -149,7 +149,7 @@ code {
 --------------------------------------------------
 */
 
-table  {
+.panel-body table {
   table-layout: fixed;
   width:600px;
 }
