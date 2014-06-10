@@ -70,19 +70,93 @@
         <div class="col-sm-3 col-md-3">
           <h1>Leaderboard:</h1>
           <div class="leaderboard-list">
-            <ul class="list-unstyled">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-            </ul>
+            <div class="panel-heading leaderboard-heading">
+              Units
+            </div>
+            <table class="table">
+              <tbody>
+                {{#each playersByUnit}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="leaderboard-list">
+            <div class="panel-heading leaderboard-heading">
+              Percent Wins
+            </div>
+            <table class="table leaderboard-table">
+              <tbody>
+                {{#each playersByPercent}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </script>
 
     <script id="leaderboard-template" type="text/x-handlebars-template">
-      <h1>This is the LEADERBOARD page</h1>
+      <div class="row">
+        <h1>Leaderboard</h1>
+        <div class="col-md-6">
+          <div class="leaderboard-list">
+            <div class="panel-heading leaderboard-heading">
+              Units
+            </div>
+            <table class="table leaderboard-table">
+              <tbody>
+                {{#each playersByPercent}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="leaderboard-list">
+            <div class="panel-heading leaderboard-heading">
+              Percent Wins
+            </div>
+            <table class="table leaderboard-table">
+              <tbody>
+                {{#each playersByPercent}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </script>
 
     <script id="new-event-template" type="text/x-handlebars-template">
@@ -261,10 +335,10 @@
       <h1>This is MY PROFILE page</h1>
       <div class="row">
         <div class="col-md-9 profile-page">
-          <h2>BettingKing04's Profile</h2>
+          <h2>BettingKing04’s Profile</h2>
 
           <div class="col-md-3">
-            <img src="/assets/images/profiles/5.jpeg" width="180px" height="180px" class="img-thumbnail" />
+            <img src="/assets/images/profiles/5.jpg" width="180px" height="180px" class="img-thumbnail" />
           </div>
 
           <div class="col-md-2">
