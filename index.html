@@ -111,6 +111,7 @@
       </div>
     </script>
 
+    
     <script id="leaderboard-template" type="text/x-handlebars-template">
       <div class="row">
         <h1>Leaderboard</h1>
@@ -180,91 +181,119 @@
     </script>
 
     <script id="profile-template" type="text/x-handlebars-template">
-      <h1>This is MY PROFILE page</h1>
       <div class="row">
-        <div class="col-md-9 profile-page">
-          <h2>BettingKing04’s Profile</h2>
-
-          <div class="col-md-3">
-            <img src="/assets/images/profiles/5.jpg" width="180px" height="180px" class="img-thumbnail" />
-          </div>
-
-          <div class="col-md-2">
-            <h2>User Name</h2>
-              <p>BettingKing04</p>
-            <h2>Record</h2>
-              <p>2513-1530-55</p>
-          </div>
-
-          <div class="col-md-4">
-            <h2>Location</h2>
-              <p>California, USA</p>
-            <h2>Website</h2>
-              <p>bettingking04.com</p>
-            <h2>Bio</h2>
-              <p>Best Handicap Bettor Ever!!</p>
-          </div>
-
-          <div class="col-md-7">
-            <p>168 Followers | 49 Following</p>
-          </div>
-
-        <div class="clearfix"></div>
-
-          <div class="col-md-9">
-            <div class="panel panel-default" style="width:685px">
-              <div class="panel-heading">Profile Overview</div>
-                <div class="panel-body">
-                  <table>
-                    <tr>
-                      <th>Units</th>
-                      <th>Win Percentage</th>
-                      <th>Current Streak</th>
-                    </tr>
-                    <tr>
-                      <td>+42.22</td>
-                      <td>67.46%</td>
-                      <td>6 Wins</td>
-                    </tr>
-                  </table>
-                </div>
+        <div class="col-md-9">
+          <div class="row">
+            <h2>BettingKing04’s Profile</h2>
+            <div class="col-md-3">
+              <img src="/assets/images/profiles/5.jpg" width="180px" height="180px" class="img-thumbnail" />
             </div>
 
-            <div class="panel panel-default" style="width:685px">
-              <div class="panel-heading">Pending Wager</div>
-                <div class="panel-body">
-                  <table>
-                    <tr>
-                      <th>06/09 World Cup</th>
-                      <th>USA</th>
-                      <th>Moneyline</th>
-                      <th>-110.00</th>
-                      <th>60 Coins</th>
-                    </tr>
-                  </table>
+            <div class="col-md-2">
+              <h2>User Name</h2>
+                <p>BettingKing04</p>
+              <h2>Record</h2>
+                <p>2513-1530-55</p>
+            </div>
+
+            <div class="col-md-4">
+              <h2>Location</h2>
+                <p>California, USA</p>
+              <h2>Website</h2>
+                <p>bettingking04.com</p>
+              <h2>Bio</h2>
+                <p>Best Handicap Bettor Ever!!</p>
+            </div>
+
+            <div class="col-md-7">
+              <p>168 Followers | 49 Following</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="clearfix"></div>
+                <div class="panel panel-default" style="width:685px">
+                  <div class="panel-heading">Profile Overview</div>
+                    <div class="panel-body">
+                      <table>
+                        <tr>
+                          <th>Units</th>
+                          <th>Win Percentage</th>
+                          <th>Current Streak</th>
+                        </tr>
+                        <tr>
+                          <td>+42.22</td>
+                          <td>67.46%</td>
+                          <td>6 Wins</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="panel panel-default" style="width:685px">
+                  <div class="panel-heading">Pending Wager</div>
+                    <div class="panel-body">
+                      <table>
+                        <tr>
+                          <th>06/09 World Cup</th>
+                          <th>USA</th>
+                          <th>Moneyline</th>
+                          <th>-110.00</th>
+                          <th>60 Coins</th>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-          <div class="row col-md-3">
-            <ul class="nav nav-sidebar">
-              <div class="badge">
-                <img src="https://cdn3.iconfinder.com/data/icons/business-office-2/512/badge_award-512.png" alt="badge" width="70" height="70" />
-              </div>
-
-              <h1>Leaderboard:</h1>
-              <div class="leaderboard-list">
-                <ul class="list-unstyled">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </div>
-            </ul>
+        
+        <div class="col-sm-3 col-md-3">
+          <div class="badge">
+            <img src="https://cdn3.iconfinder.com/data/icons/business-office-2/512/badge_award-512.png" alt="badge" width="70" height="70" />
+          </div>
+          <h1>Leaderboard:</h1>
+          <div class="leaderboard-list">
+            <div class="panel-heading leaderboard-heading">
+              Units
+            </div>
+            <table class="table">
+              <tbody>
+                {{#each playersByUnit}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="leaderboard-list">
+            <div class="panel-heading leaderboard-heading">
+              Percent Wins
+            </div>
+            <table class="table leaderboard-table">
+              <tbody>
+                {{#each playersByPercent}}
+                  <tr>
+                    <td class="leaderboard-rank">{{rank}}</td>
+                    <td><img src={{avatar}} width="20px" height="20px" alt="picture"></td>
+                    <td class="leaderboard-name">{{name}}</td>
+                    <td class="leaderboard-followers"><strong>{{followers}}</strong> <span class="glyphicon glyphicon-user"></span></td>
+                    <td class="leaderboard-units"><strong>{{units}}</strong> units</td>
+                    <td class="leaderboard-percent"><strong>{{percent}}</strong> wins</td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
           </div>
         </div>
+      </div>
     </script>
 
     <!-- Before login template -->

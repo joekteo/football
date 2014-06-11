@@ -192,34 +192,35 @@ $ ->
   profileTemplate = Handlebars.compile $("#profile-template").html()
 
   loginNav = $('#login-nav')
-  loginNav.html beforeLoginTemplate
   main = $('#main')
-  main.html dashboardTemplate(
-    pageTitle: "Upcoming games:"
-    games: upcomingGames
-    playersByPercent: playersByPercent
-    playersByUnit: playersByUnit
+
+  showGames = (title, gamess) ->
+    main.html dashboardTemplate(
+      pageTitle: title
+      games: gamess
+      playersByPercent: playersByPercent
+      playersByUnit: playersByUnit
     )
+
+  showUpcomingGames = () ->
+    showGames("Upcoming games:", upcomingGames)
+
+  showPastGames = () ->
+    showGames("Past games:", pastGames)
+
+  loginNav.html beforeLoginTemplate
+
+  showUpcomingGames()
 
   $('#header-navlinks').on 'click', '#upcoming-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html dashboardTemplate(
-      pageTitle: "Upcoming games:"
-      games: upcomingGames
-      playersByPercent: playersByPercent
-      playersByUnit: playersByUnit
-      )
+    showUpcomingGames()
 
   $('#header-navlinks').on 'click', '#results-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html dashboardTemplate(
-      pageTitle: "Past games:"
-      games: pastGames
-      playersByPercent: playersByPercent
-      playersByUnit: playersByUnit
-      )
+    showPastGames()
 
   $('#header-navlinks').on 'click', '#leaderboard-link', (e) ->
     e.preventDefault()
@@ -266,7 +267,10 @@ $ ->
 
   $('#login-nav').on 'click', '#profile-link', (e) ->
     e.preventDefault()
-    main.html profileTemplate()
+    main.html profileTemplate(
+      playersByPercent: playersByPercent
+      playersByUnit: playersByUnit
+    )
     setActive(@)
 
 # --------------------------------------
