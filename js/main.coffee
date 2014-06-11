@@ -145,29 +145,29 @@ $ ->
   ]
 
   playersByPercent = [
-    { name: "Bob", percent: "78%", units: "1549" }
-    { name: "Joe", percent: "77%", units: "1651" }
-    { name: "Bill", percent: "75%", units: "1409" }
-    { name: "Ron", percent: "74%", units: "1210" }
-    { name: "Jim", percent: "61%", units: "1319" }
-    { name: "Ray", percent: "59%", units: "1200" }
-    { name: "Lina", percent: "59%", units: "1199" }
-    { name: "Rick", percent: "58%", units: "1105" }
-    { name: "Tina", percent: "57%", units: "1201" }
-    { name: "Ank", percent: "55%", units: "905" }
+    { rank: "1", name: "Bob", percent: "78%", units: "1549", followers: "123", avatar: "/assets/images/profiles/1.jpg" }
+    { rank: "2", name: "Joe", percent: "77%", units: "1651", followers: "138", avatar: "/assets/images/profiles/2.jpg" }
+    { rank: "3", name: "Bill", percent: "75%", units: "1409", followers: "121", avatar: "/assets/images/profiles/3.jpg" }
+    { rank: "4", name: "Ron", percent: "74%", units: "1210", followers: "90", avatar: "/assets/images/profiles/4.jpg" }
+    { rank: "5", name: "Jim", percent: "61%", units: "1319", followers: "202", avatar: "/assets/images/profiles/5.jpg" }
+    { rank: "6", name: "Ray", percent: "59%", units: "1200", followers: "121", avatar: "/assets/images/profiles/6.jpg" }
+    { rank: "7", name: "Lina", percent: "59%", units: "1199", followers: "89", avatar: "/assets/images/profiles/7.jpg" }
+    { rank: "8", name: "Rick", percent: "58%", units: "1105", followers: "70", avatar: "/assets/images/profiles/8.jpg" }
+    { rank: "9", name: "Tina", percent: "57%", units: "1201", followers: "20", avatar: "/assets/images/profiles/9.jpg" }
+    { rank: "10", name: "Ank", percent: "55%", units: "905", followers: "37", avatar: "/assets/images/profiles/10.jpg" }
   ]
 
   playersByUnit = [
-    { name: "Joe", percent: "77%", units: "1651" }
-    { name: "Bob", percent: "78%", units: "1549" }
-    { name: "Bill", percent: "75%", units: "1409" }
-    { name: "Jim", percent: "61%", units: "1319" }
-    { name: "Ron", percent: "74%", units: "1210" }
-    { name: "Ray", percent: "59%", units: "1200" }
-    { name: "Lina", percent: "59%", units: "1199" }
-    { name: "Tina", percent: "57%", units: "1201" }
-    { name: "Rick", percent: "58%", units: "1105" }
-    { name: "Ank", percent: "55%", units: "905" }
+    { rank: "1", name: "Joe", percent: "77%", units: "1651", followers: "138", avatar: "/assets/images/profiles/2.jpg" }
+    { rank: "2", name: "Bob", percent: "78%", units: "1549", followers: "123", avatar: "/assets/images/profiles/1.jpg" }
+    { rank: "3", name: "Bill", percent: "75%", units: "1409", followers: "121", avatar: "/assets/images/profiles/3.jpg" }
+    { rank: "4", name: "Jim", percent: "61%", units: "1319", followers: "202", avatar: "/assets/images/profiles/5.jpg" }
+    { rank: "5", name: "Ron", percent: "74%", units: "1210", followers: "90", avatar: "/assets/images/profiles/4.jpg" }
+    { rank: "6", name: "Ray", percent: "59%", units: "1200", followers: "121", avatar: "/assets/images/profiles/6.jpg" }
+    { rank: "7", name: "Lina", percent: "59%", units: "1199", followers: "89", avatar: "/assets/images/profiles/7.jpg" }
+    { rank: "8", name: "Tina", percent: "57%", units: "1201", followers: "20", avatar: "/assets/images/profiles/9.jpg" }
+    { rank: "9", name: "Rick", percent: "58%", units: "1105", followers: "70", avatar: "/assets/images/profiles/8.jpg" }
+    { rank: "10", name: "Ank", percent: "55%", units: "905", followers: "37", avatar: "/assets/images/profiles/10.jpg" }
   ]
 
   unsetActive = () ->
@@ -228,7 +228,10 @@ $ ->
   $('#header-navlinks').on 'click', '#leaderboard-link', (e) ->
     e.preventDefault()
     setActive(@)
-    main.html leaderboardTemplate()
+    main.html leaderboardTemplate(
+      playersByPercent: playersByPercent
+      playersByUnit: playersByUnit
+    )
 
   $('#footer-navlinks').on 'click', '#help-link', (e) ->
     e.preventDefault()
