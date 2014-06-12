@@ -190,7 +190,6 @@ $ ->
   beforeLoginTemplate = Handlebars.compile $("#before-login-template").html()
   afterLoginTemplate = Handlebars.compile $("#after-login-template").html()
   profileTemplate = Handlebars.compile $("#profile-template").html()
-  newEventTemplate = Handlebars.compile $("#new-event-template").html()
 
   loginNav = $('#login-nav')
   loginNav.html beforeLoginTemplate
@@ -202,9 +201,6 @@ $ ->
     playersByUnit: playersByUnit
     )
 
-# ************************************************
-  # main.html newEventTemplate
-# ************************************************
   $('#header-navlinks').on 'click', '#upcoming-link', (e) ->
     e.preventDefault()
     setActive(@)
@@ -272,16 +268,6 @@ $ ->
     e.preventDefault()
     main.html profileTemplate()
     setActive(@)
-
-  $('#login-nav').on 'click', '#new-event-link', (e) ->
-    e.preventDefault()
-    main.html newEventTemplate()
-    setActive(@)
-
-  $('#paid-event').on 'click', (e) ->
-    $('#event-price-show').removeClass('hide')
-  $('#free-event').on 'click', (e) ->
-    $('#event-price-show').addClass('hide')
 
 # --------------------------------------
 # ########
