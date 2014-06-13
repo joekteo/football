@@ -111,7 +111,7 @@
       </div>
     </script>
 
-    
+
     <script id="leaderboard-template" type="text/x-handlebars-template">
       <div class="row">
         <h1>Leaderboard</h1>
@@ -242,9 +242,50 @@
                 </table>
               </div>
             </div>
+
+            <div class="panel panel-default" style="width:785px">
+              <div class="panel-heading">
+                Wager History
+              </div>
+              <div class="panel-body">
+              </div>
+            </div>
+
+            <div class="panel panel-default" style="width:785px">
+              <div class="panel-heading">
+                Comments
+              </div>
+              <div class="panel-body">
+                <dl class="dl-horizontal">
+                  <dt>Bob</dt>
+                  <dd>Nice bet!</dd>
+                  <dt>Bob</dt>
+                  <dd>How did you do that?</dd>
+                  <dt>Jim</dt>
+                  <dd>Thanks for the tip!</dd>
+                  <dt>Alice</dt>
+                  <dd>Im rich!</dd>
+                  <dt>Alice</dt>
+                  <dd>thanks to you</dd>
+                  <dt>Bob</dt>
+                  <dd>Youre welcome!</dd>
+                </dl>
+              </div>
+              <div class="panel-body">
+                <form accept-charset="UTF-8" action="" method="POST">
+                  <div class="form-group">
+                    <label for="new_message" class="sr-only">Comment</label>
+                    <input type="comment" class="form-control" id="new_message" placeholder="Enter your comment">
+                  </div>
+                  <button class="btn btn-info" type="submit">Post New Message</button>
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
-        
+
+
         <div class="col-sm-3 col-md-3">
           <div class="badge">
             <img src="https://cdn3.iconfinder.com/data/icons/business-office-2/512/badge_award-512.png" alt="badge" width="70" height="70" />
